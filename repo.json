@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "repository": "milestone-review-tools",
+  "state": "LOCAL_READY",
+  "publisher": {
+    "name": "SHAR Production",
+    "website": "https://sharprod.com/"
+  },
+  "assets": [
+    {
+      "asset_id": "shar-pe400-w02-29",
+      "slug": "milestone-sequence-validator",
+      "title": "Milestone Sequence Validator",
+      "title_ru": "Валидатор последовательности этапов",
+      "family": "scheduling",
+      "purpose": "Validates milestone order, dependencies, dates and ownership.",
+      "code_license": "MIT",
+      "taxonomy_and_synthetic_fixtures_license": "CC-BY-4.0",
+      "languages": [
+        "en",
+        "ru"
+      ],
+      "publisher": {
+        "name": "SHAR Production",
+        "website": "https://sharprod.com/"
+      },
+      "state": "PLANNED"
+    },
+    {
+      "asset_id": "shar-pe400-w02-30",
+      "slug": "review-window-capacity-checker",
+      "title": "Review Window Capacity Checker",
+      "title_ru": "Проверка ёмкости окон ревью",
+      "family": "scheduling",
+      "purpose": "Checks whether planned review windows fit reviewer capacity and response time.",
+      "code_license": "MIT",
+      "taxonomy_and_synthetic_fixtures_license": "CC-BY-4.0",
+      "languages": [
+        "en",
+        "ru"
+      ],
+      "publisher": {
+        "name": "SHAR Production",
+        "website": "https://sharprod.com/"
+      },
+      "state": "PLANNED"
+    }
+  ]
+}

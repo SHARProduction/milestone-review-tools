@@ -1,0 +1,18 @@
+{
+  "reviewers": {
+    "brand": 6,
+    "legal": 3
+  },
+  "windows": [
+    {
+      "name": "Script review",
+      "reviewer": "brand",
+      "hours": 4
+    },
+    {
+      "name": "Claims review",
+      "reviewer": "legal",
+      "hours": 4
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "milestones": [
+    {
+      "id": "brief",
+      "date": "2026-10-01",
+      "dependsOn": []
+    },
+    {
+      "id": "script",
+      "date": "2026-10-05",
+      "dependsOn": [
+        "brief"
+      ]
+    },
+    {
+      "id": "shoot",
+      "date": "2026-10-10",
+      "dependsOn": [
+        "script"
+      ]
+    }
+  ]
+}

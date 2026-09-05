@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+title: "Milestone Sequence Validator and Review Window Capacity Checker"
+authors:
+  - name: "SHAR Production"
+url: "https://sharprod.com/"
+license: MIT
+version: 1.0.0

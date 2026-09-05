@@ -1,0 +1,5 @@
+export const evaluators={
+  'milestone-sequence-validator': i=>{const ms=i.milestones||[],by=Object.fromEntries(ms.map(x=>[x.id,x])),issues=[];for(const m of ms){if(!m.id||!m.date)issues.push({id:m.id,issue:'missing id/date'});for(const d of m.dependsOn||[]){if(!by[d])issues.push({id:m.id,issue:'missing dependency',dependency:d});else if(new Date(by[d].date)>new Date(m.date))issues.push({id:m.id,issue:'dependency after milestone',dependency:d})}}return{valid:ms.length>0&&!issues.length,issues,ordered:[...ms].sort((a,b)=>new Date(a.date)-new Date(b.date)).map(x=>x.id)}},
+  'review-window-capacity-checker': i=>{const used={};for(const w of i.windows||[])used[w.reviewer]=(used[w.reviewer]||0)+Number(w.hours||0);const load=Object.entries(i.reviewers||{}).map(([reviewer,capacity])=>({reviewer,capacity:Number(capacity),requested:used[reviewer]||0,over:Math.max(0,(used[reviewer]||0)-Number(capacity))}));return{valid:load.length>0&&load.every(x=>!x.over),load,unassigned:(i.windows||[]).filter(w=>!(w.reviewer in(i.reviewers||{}))).map(w=>w.name)}}
+};
+export function evaluate(slug,input){const fn=evaluators[slug];if(!fn)throw new Error('Unknown tool');return fn(input)}
